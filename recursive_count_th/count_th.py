@@ -10,18 +10,19 @@ def count_th(word, occurance = 0):
     pointer1 = len(word) - 1
     pointer2 = pointer1 - 1
     
-    
+    # check word length
     if len(word) <= 1:
         return occurance
     
+    # check match
     if word[pointer1] == 'h' and word[pointer2] == 't':
         return count_th(word[:len(word) - 1], occurance + 1)
     else:
+        # move pointers
         pointer2 -= 1
         pointer1 -= 1
         return count_th(word[:len(word) -1], occurance)
             
     
-    # TBC
     
     
